@@ -1,0 +1,21 @@
+abstract class Caaa {
+    protected int num; //整數成員變數num
+    public Caaa(int n) { //抽象類別Caaa的建構子
+        num = n; //將傳入的整數n設給num成員變數
+    }
+    public abstract void show(); 
+}
+class Cbbb extends Caaa {//定義子類別Cbbb，繼承自抽象類別Caaa
+    public Cbbb(int n) {
+        super(n); //呼叫父類別的建構子，設定num值
+    }
+    public void show() {
+        System.out.println("num=" + num); 
+    }
+}
+public class class01 {
+    public static void main(String args[]) {
+        Cbbb bb = new Cbbb(2); //創建Cbbb的實例並設num成員的值為2
+        bb.show(); 
+    }
+}
