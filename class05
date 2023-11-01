@@ -1,0 +1,21 @@
+interface iAaa {
+    public void show(); 
+}
+class Bbb {// 定義類別 Bbb
+    public int num = 10; //num初始值為10
+    public void set(int n) {
+        num = n; //設定num欄位的值為傳入的參數n
+    }
+}
+class Ccc extends Bbb implements iAaa {//定義類別Ccc繼承自Bbb
+    public void show() {
+        System.out.println("num=" + num);//輸出 num 欄位的值
+    }
+}
+public class class05 {
+    public static void main(String[] args) {
+        Ccc obj = new Ccc(); 
+        obj.set(5); 
+        obj.show(); 
+    }
+}
